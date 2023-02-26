@@ -1,3 +1,25 @@
-.div {
+@charset "UTF-8";
+/**
+    sass语法扩张
+    1. 选择器嵌套
+    2. 父选择器 &
+    3. 属性嵌套
+    4. 占位符选择器 %base
+*/
+div span {
   color: #334;
+}
+
+a:hover {
+  color: black;
+  font-size: 12;
+  font-color: red;
+}
+
+div.grace {
+  display: inline;
+}
+
+.grace {
+  color: green;
 }/*# sourceMappingURL=css.css.map */

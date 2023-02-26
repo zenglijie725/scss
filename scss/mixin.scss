@@ -1,0 +1,12 @@
+@mixin block-padding($top:0, $botton ... ){
+    padding-top: $top;
+    padding-bottom: $botton;
+}
+
+.container {
+    @include block-padding(20, 10, 30, 40)
+}
+
+.container2 {
+    @include block-padding($botton: 10, $top: 20)
+}

@@ -1,0 +1,10 @@
+/**
+ .css
+ url()
+ http://
+ don't use underline to name a same file, otherwise it will be confused
+*/
+@import 'public.scss';
+p {
+    color: $font-base-color;
+} 

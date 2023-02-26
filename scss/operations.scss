@@ -1,0 +1,58 @@
+/*
+operations
+equality operators : != =  : can use variables
+relational operators : > < <= >= : can only use number
+logic operators : and or not : can use variables
+
+*/
+$theme:red;
+$height:2;
+.container {
+    @if $theme != "red" and $height =2 {
+        background-color: red;
+    }
+    @else {
+        background-color: blue;
+    }
+    @if not ($height > 3){
+        background-color: purple;
+    }
+}
+
+/*
+number operators 
+scope:
+1. number
+2. %
+3. px, pt, in ....(part of the css units)
+*/
+.container2 {
+    /*
+    ---- addition : add
+    ---- subtraction : minus
+    ---- mod
+    can do digital conversion, but if you use two different units, it will throw exception
+    
+    */
+    border-top: 50 + 20; // 70
+    border-left: 20 + 10px; // 30px
+    width: 10px % 5px; //0
+    /* 
+    ---- division : divide
+    ---- multiplication : times/multiple
+    except two different units, two same units is not allowed as well
+    ---xxxx 50% * 50% // 50% / 50%
+    */
+    border-right: 20% * 20;
+    border-bottom: (10/5);// have to use bracket, otherwise it won't be recognized as an operation
+   
+}
+/*
+ String operator
+ once it has quatation marks, it will be convert into quatation string.
+ a problem: if one parameter is returned by funtion, it will be different;
+*/
+.container3 {
+    content: "foo" + bar; // "foobar"
+    content: foo + bar; // foobar
+}

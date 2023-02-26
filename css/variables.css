@@ -1,0 +1,19 @@
+/*
+    1. variables action scope 
+    2. 6 types of variable assignment support:
+     - string
+     - number 
+     - color
+     - null
+     - boolean
+     - list (use comma or space is as separator)
+     - maps (key:value)
+*/
+div {
+  color: red;
+  background-color: black;
+}
+
+.footer {
+  font-size: 16px;
+}/*# sourceMappingURL=variables.css.map */

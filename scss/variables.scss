@@ -1,0 +1,28 @@
+/*
+    1. variables action scope 
+    2. 6 types of variable assignment support:
+     - string
+     - number 
+     - color
+     - null
+     - boolean
+     - list (use comma or space is as separator)
+     - maps (key:value)
+*/
+$color: red;
+$color: blue !default;//if the red one is anno
+$blank-mode: true;
+div {
+    color: $color;
+    $font-size: 16px !global;
+    @if $blank-mode {
+        background-color: black;
+    }
+    @else {
+        background-color: white;
+    }
+}
+
+.footer {
+    font-size: $font-size;
+}

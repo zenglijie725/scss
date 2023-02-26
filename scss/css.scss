@@ -1,7 +1,32 @@
 $baseColor:#334;
-
+/**
+    sass语法扩张
+    1. 选择器嵌套
+    2. 父选择器 &
+    3. 属性嵌套
+    4. 占位符选择器 %base
+*/
 div {
     span {
-        color:$baseColor
+        color: $baseColor
     }    
+}
+
+a {
+    &:hover {
+        color: black;
+        font: {
+            size: 12;
+            color: red;
+        }
+    }
+}
+
+div%base {
+    display: inline;
+}
+
+.grace {
+    @extend %base;
+    color: green;
 }
