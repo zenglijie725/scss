@@ -1,0 +1,46 @@
+/*
+    @at-root - jump out of the nest
+*/
+
+.parent {
+    font-size: 13px;
+    @at-root .child {
+        font-size: 14px;
+        .son {
+            font-size: 15px;
+        }
+    }
+}
+
+/*
+ other way to jump out of nest
+*/
+
+
+.foo {
+    &{
+        font-size: 12px
+    }
+}
+
+.foo {
+    .bar &{
+        font-size:12px;
+    }
+}
+
+/*
+ it can't jump out of @media or @support
+ if you want to out of them, use @at-root(without:media)  @at-root(without:support)
+keywords : 1. all, 2.rule, 3.with, 4.withour
+*/
+
+@media screen {
+    .foo {
+        @at-root (without:media){
+            .bar{
+                font-size:12px;
+            }
+        } 
+    }
+}

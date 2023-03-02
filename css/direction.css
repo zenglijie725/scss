@@ -1,0 +1,42 @@
+/*
+@if @for @each @while 
+*/
+.p1 {
+  width: 10px;
+}
+
+.p2 {
+  width: 20px;
+}
+
+.p3 {
+  width: 30px;
+}
+
+.p1 {
+  width: 10px;
+}
+
+.p2 {
+  width: 20px;
+}
+
+.p3 {
+  width: 30px;
+}
+
+.p4 {
+  width: 40px;
+}
+
+.p0 {
+  background-color: red;
+}
+
+.p1 {
+  background-color: green;
+}
+
+.p2 {
+  background-color: blue;
+}/*# sourceMappingURL=direction.css.map */

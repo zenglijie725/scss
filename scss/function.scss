@@ -1,0 +1,88 @@
+/*
+ color()
+ ---- lighten, darken,opacity
+*/
+
+.p1 {
+    color: red;
+}
+.p2 {
+    color: lighten($color: red, $amount: 15%)
+}
+.p3 {
+    color: opacify($color: red, $amount: 0.5)
+}
+/*
+ string()
+ quote, unquote, str-length
+*/
+
+p {
+    &::after {
+        content: quote($string: 这是里面的内容)
+    }
+    z-index: str-length($string: sass学习);
+}
+
+/*
+Math()
+abs, ceil, max, random(0-1)
+*/
+
+/*
+List()
+lenth, index, append, nth
+*/
+div {
+    z-index: length($list: 12px);
+    z-index: length($list: 12px 5px 8px);
+    z-index: index($list: a b c d, $value: c);
+    color: nth($list: a b c, $n: 2);
+}
+/*
+Map()
+map-has-key, map-keys, map-values, map-get
+*/
+$font-sizes: ("small":12px, "normal": 18px, "large":40px);
+$padding :(top:10px, right:20px, bottom: 10px, left:30px);
+.grace {
+  font-size: map-get($map: $font-sizes, $key: "normal"); 
+  @if map-has-key($map: $font-sizes, $key: "normal") {
+     padding-left: map-get($map: $font-sizes, $key: "large");
+  }  
+  &::after {
+    content: map-keys($map: $font-sizes) + "" + map-values($map: $font-sizes) 
+  }
+}
+/*
+selector
+
+selector-append
+selector-unify
+
+should consider the function return , it will have some accidents
+*/
+
+.grace2 {
+    content:'' + selector-append(".a" + ".b",);
+    content: selector-unify(
+        "a",".disabled"
+    ) + '';
+}
+/*
+ self-checking function
+ variable-exists
+*/
+$colorful:exist;
+@mixin padding($top:0, $botton ... ){
+    padding-top: $top;
+    padding-bottom: $botton;
+}
+.container3 {
+    @if(variable-exists($name: colorful)) {
+        color:$colorful
+    }
+    @if mixin-exists($name: padding) {
+        color:black;
+    }
+}

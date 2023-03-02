@@ -1,0 +1,10 @@
+/*
+ forward,  combine the useful information together and export to one file
+@forward public --> @use forward
+ 
+ */
+
+ @forward 'public' show font-base-color;
+ @forward 'public' hide font-base-color;
+ @forward 'public';
+ @forward 'public' as c-* hide c-font-base-color;  // @use ---> @inclue xxx.c-xxx();

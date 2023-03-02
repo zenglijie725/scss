@@ -1,0 +1,22 @@
+.container {
+  padding-top: 20;
+  padding-bottom: 10;
+}
+
+.container2 {
+  padding-top: 20;
+  padding-bottom: 10;
+}
+
+/*
+    load mixin,function and variables from other sass files
+    modulize import
+    you can create a file name as _index.scss, and add the link into that site, 
+        if they can't find the file from  @use 'fouse' , they will search @use 'foruse/index' instead.
+
+    use / backslash instead of \ forward slash
+*/
+body {
+  padding-top: 20;
+  padding-bottom: 10;
+}/*# sourceMappingURL=@use.css.map */

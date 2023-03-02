@@ -10,3 +10,5 @@
 .container2 {
     @include block-padding($top : 20,$bottom : 10)
 }
+$font-base-color:red !default;
+$font-base-background-color:yellow;

@@ -1,3 +1,9 @@
+/**
+ .css
+ url()
+ http://
+ don't use underline to name a same file, otherwise it will be confused
+*/
 p {
   color: red;
 }/*# sourceMappingURL=import.css.map */

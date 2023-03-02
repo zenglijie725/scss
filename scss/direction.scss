@@ -1,0 +1,28 @@
+/*
+@if @for @each @while 
+*/
+
+@for $i from 1 to 4 {// 1,2,3 don't inclue the end
+    .p#{$i} {
+        width: 10px * $i;
+    }
+}
+
+@for $i from 1 through 4 {// 1,2,3,4 inclue the end
+    .p#{$i} {
+        width: 10px * $i;
+    }
+}
+
+$color-list: red green blue ;
+@each $color in $color-list {
+    $index : index($color-list, $color);
+    .p#{$index - 1} {  // don't forget to add space between the logic operators
+        background-color: $color;
+    }
+}
+
+$column: 12;
+@while $column > 0 {
+    $column : $column - 1
+}

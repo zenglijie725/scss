@@ -1,0 +1,23 @@
+/* 
+    interpolation: #
+    separator : /
+
+    as the operator lesson said, once it has the variables, the separator will be recognized as divition.
+    so sometimes you should use interpolation to assign this separator is just a separator :>
+*/
+
+$font-size:12px;
+p {
+    font: #{$font-size}/ 12px Helvetica;
+}
+
+$cool: use as annotation;
+/*
+ can also used as the attr, name ...
+  @annotation #{$cool}
+ */
+$class-name: danger;
+$attr: color;
+a.#{$class-name} {
+    border-#{$attr}: red;
+}

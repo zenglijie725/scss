@@ -1,0 +1,15 @@
+// if($condition,$if-true,$if-false);
+
+$theme: 'light';
+.container {
+    @if $theme == 'light' {
+        color: red;
+    }
+    @else {
+        color: white;
+    } 
+}
+
+.container2 {
+    color: if($theme == 'light', red, white)
+}

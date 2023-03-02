@@ -1,0 +1,16 @@
+/*
+    load mixin,function and variables from other sass files
+    modulize import
+    you can create a file name as _index.scss, and add the link into that site, 
+        if they can't find the file from  @use 'fouse' , they will search @use 'foruse/index' instead.
+
+    use / backslash instead of \ forward slash
+*/
+ 
+@use 'foruse' with($font-base-color:red );
+// @use 'foruse' ;
+@use 'foruse' as g1;
+
+body {
+    @include g1.block-padding(20, 10)
+}
